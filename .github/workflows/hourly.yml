@@ -2,7 +2,7 @@ name: hourly-discord-webhook
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 1,7,10,14,17,20,23 * * *"
   workflow_dispatch:
 
 jobs:
@@ -30,3 +30,4 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DB_URL: ${{ secrets.DB_URL }}
+
